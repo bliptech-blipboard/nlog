@@ -1,11 +1,17 @@
 # Blipboard Network Target
 
-This package contains a simple derivation of NLog's `NetworkTarget` configuring sensible defaults for easy use with the [Blipboard event visualization](https://blipboard.io).
+This package contains an NLog target for easy use of NLog for the [Blipboard](https://blipboard.io).
 
-You can use it by adding the package:
+You can use it by adding the package with
 
 ```sh
 dotnet add package Bliptech.Blipboard.NLog
+```
+
+or
+
+```
+Install-Package Bliptech.Blipboard.NLog
 ```
 
 and configuring the target in you `nlog.config`. The simplest configuration looks like this:
@@ -49,7 +55,7 @@ Make sure to include the truncation operators as Blipboard has a total ingestion
 
 ## Message templates and collapsers
 
-The target sends the raw message template as `msg_template`:
+The target sends what NLog calls the *raw message* as `msg_template`:
 
 ```c#
 // Both those logs will appear in the same channel as
@@ -58,7 +64,7 @@ log.Info("The user {user} logged on", "bob");
 log.Info("The user {user} logged on", "alice");
 ```
 
-However, since this type of grouping is of lesser concern for other targets, it's common that expanded messages are passed to NLog and therefore the target can no longer tell if they should be grouped together:
+However, since this type of grouping is of lesser concern for other targets, it's common that only pre-expanded messages are passed to NLog and therefore the target can no longer tell if messages should be grouped together:
 
 ```c#
 // Bad: By default, all of these will appear in their own channel
@@ -90,6 +96,6 @@ Note that using regexes has some performance impact.
 
 ## It's really just the `NetworkTarget`
 
-All features of this target are implemented on top of NLog's existing features in the sense that each configuration of `BlipboardNetwork` could be replaced with an equivalent configuration of `Network`.
+All features of this target are implemented on top of NLog's existing features in the sense that each configuration of the `BlipboardNetwork` target could be replaced with an equivalent configuration of NLog's `Network` target.
 
 This includes the collapsers, which would then require those regexes to be defined in variables in the `nlog.config` and used in respective layouters.
