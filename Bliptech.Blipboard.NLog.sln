@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLog", "NLog\NLog.csproj", "{ADCBC9B6-3AB4-45F2-B6DD-4F7F0E95CB4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NLogTestProgram", "Tests\NLogTestProgram\NLogTestProgram.csproj", "{AAA20DA6-CB46-46C8-B9E0-BD83420B5B44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADCBC9B6-3AB4-45F2-B6DD-4F7F0E95CB4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADCBC9B6-3AB4-45F2-B6DD-4F7F0E95CB4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADCBC9B6-3AB4-45F2-B6DD-4F7F0E95CB4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADCBC9B6-3AB4-45F2-B6DD-4F7F0E95CB4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAA20DA6-CB46-46C8-B9E0-BD83420B5B44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAA20DA6-CB46-46C8-B9E0-BD83420B5B44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAA20DA6-CB46-46C8-B9E0-BD83420B5B44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAA20DA6-CB46-46C8-B9E0-BD83420B5B44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8515F6D6-C756-4041-9F71-02A71750AB72}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+    <AssemblyName>Bliptech.Blipboard.NLog</AssemblyName>
+    <RootNamespace>Bliptech.Blipboard.NLog</RootNamespace>
+
+    <PackageId>Bliptech.Blipboard.NLog</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Jens Theisen</Authors>
+    <Company>Bliptech</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.6.0" />
+  </ItemGroup>
+
+</Project>
