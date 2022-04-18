@@ -5,7 +5,9 @@ var collapsers = Bliptech.Blipboard.NLog.CollapsePatternRegistry.Default;
 
 collapsers.Add("secrets", @"\\(secret.*\\)");
 
-var log = LogManager.GetCurrentClassLogger();
+
+
+var log = LogManager.GetLogger("Simple");
 
 log.Info("Hello, World!");
 
@@ -28,3 +30,16 @@ catch (Exception ex)
 }
 
 log.Info("A message with no secrets (secret is foo)");
+
+
+
+var log2 = LogManager.GetLogger("Modified");
+
+try
+{
+    throw new Exception("A test exception");
+}
+catch (Exception ex)
+{
+    log2.Info(ex, "This test exception was also caught");
+}
