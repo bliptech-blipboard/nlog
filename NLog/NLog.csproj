@@ -10,6 +10,7 @@
     <Version>1.0.1</Version>
     <Authors>Jens Theisen</Authors>
     <Company>Bliptech</Company>
+    <WebPage>https://github.com/bliptech-blipboard/nlog</WebPage>
     <Description>
       An NLog target for the Blipboard
     </Description>
